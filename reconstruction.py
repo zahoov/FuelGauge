@@ -38,17 +38,18 @@ class ScreenSaver(Screen):
 class FuelInjectionLayout(Screen):
     conversion_factor = cf
     pass
-class Change_Screen():
-    name = 'third'
-    ss = ScreenSaver(name=name)
-    self.add_widget(ss)
-    self.current = name
+
+
 
 
 class MyScreenManager(ScreenManager):
-
-
-    Clock.schedule_once(Change_Screen, 1)
+    def change_screen(self):
+    	name = 'third'
+    	ss = ScreenSaver(name=name)
+    	self.add_widget(ss)
+    	self.current = name
+	
+    #Clock.schedule_once(change_screen, 1)
     #delay = NumericProperty(5)
 
 
